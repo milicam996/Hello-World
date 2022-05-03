@@ -1,9 +1,6 @@
 package com.assignment.HelloWorld.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tbl_hello_world")
@@ -11,6 +8,7 @@ import javax.persistence.Table;
 public class HelloWorldModel {
     @Id
     @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column

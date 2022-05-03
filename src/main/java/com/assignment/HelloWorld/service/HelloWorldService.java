@@ -15,4 +15,8 @@ public class HelloWorldService {
         return helloWorldModel.getHw_translation();
     }
 
+
+    public void saveOrUpdate(HelloWorldModel language) {
+        helloWorldRepository.save(language);
+    }
 }

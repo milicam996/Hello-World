@@ -1,12 +1,10 @@
 package com.assignment.HelloWorld.controller;
 
+import com.assignment.HelloWorld.model.HelloWorldModel;
 import com.assignment.HelloWorld.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloWorldController {
@@ -28,6 +26,13 @@ public class HelloWorldController {
     @GetMapping("/hello/{lang}")
     public String GetByLang(@PathVariable("lang") String lang) {
         return helloWorldService.GetByLang(lang);
+    }
+
+    @PostMapping("/new-language")
+    private int saveLanguage(@RequestBody HelloWorldModel language)
+    {
+        helloWorldService.saveOrUpdate(language);
+        return language.getId();
     }
 }
 
