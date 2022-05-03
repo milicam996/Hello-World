@@ -8,3 +8,6 @@ INSERT INTO tbl_hello_world (id,lang,hw_translation) VALUES (7, 'Irish', 'Dia du
 INSERT INTO tbl_hello_world (id,lang,hw_translation) VALUES (8, 'Slovenian', 'Pozdravljen, svet');
 INSERT INTO tbl_hello_world (id,lang,hw_translation) VALUES (9, 'Czech', 'Ahoj světe');
 INSERT INTO tbl_hello_world (id,lang,hw_translation) VALUES (10, 'Hawaiian', 'Aloha Honua');
+
+INSERT INTO tbl_users (id,username,password) VALUES (1,'Milica','milica1');
+INSERT INTO tbl_users (id,username,password) VALUES (2,'Test','test2');
