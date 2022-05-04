@@ -15,11 +15,11 @@ public class HelloWorldService {
     private static final Logger LOGGER = LogManager.getLogger(HelloWorldService.class);
 
     public String GetByLang(String lang) {
-        HelloWorldModel helloWorldModel=null;
+        HelloWorldModel helloWorldModel = new HelloWorldModel();
         try {
-          helloWorldModel = helloWorldRepository.GetByLang(lang);
+            helloWorldModel = helloWorldRepository.GetByLang(lang);
         } catch (Exception exception) {
-            LOGGER.error("Error occurred in business service : {}",exception.getMessage());
+            LOGGER.error("Error occurred in business service : {}", exception.getMessage());
         }
 
         return helloWorldModel.getHw_translation();
