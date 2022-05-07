@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 public interface HelloWorldRepository extends JpaRepository<HelloWorldModel, Long>, CrudRepository<HelloWorldModel, Long> {
-    @Query(value = "select * from tbl_hello_world where lang like ?1", nativeQuery = true)
+    @Query(value = "select * from tbl_hello_world where lang like ?1 limit 1", nativeQuery = true)
     HelloWorldModel GetByLang(String lang);
 }

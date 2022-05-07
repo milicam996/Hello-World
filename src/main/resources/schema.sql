@@ -7,7 +7,6 @@ lang VARCHAR(250) NOT NULL,
 hw_translation VARCHAR(250) NOT NULL
 );
 
-
 CREATE TABLE tbl_users (
 id INT AUTO_INCREMENT PRIMARY KEY,
 username VARCHAR(250) NOT NULL,

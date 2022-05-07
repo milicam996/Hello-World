@@ -2,7 +2,6 @@ package com.assignment.HelloWorld.service;
 
 import com.assignment.HelloWorld.model.HelloWorldModel;
 import com.assignment.HelloWorld.repository.HelloWorldRepository;
-import org.apache.coyote.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,12 +33,21 @@ public class HelloWorldService {
             } catch (Exception exception) {
                 LOGGER.error("Error occurred in hello world service : {}", exception.getMessage());
             }
-            return helloWorldModel.getHw_translation();
+
+            if (helloWorldModel != null) {
+                return helloWorldModel.getHw_translation();
+            } else {
+                return "Unkown language";
+            }
         }
     }
 
     public void saveOrUpdate(HelloWorldModel language) {
-        helloWorldRepository.save(language);
+        try {
+            helloWorldRepository.save(language);
+        } catch (Exception exception) {
+            LOGGER.error("Error occurred in hello world service : {}", exception.getMessage());
+        }
     }
 
     private String GetByLangAPI(String lang) {
@@ -57,10 +65,6 @@ public class HelloWorldService {
         } catch (Exception exception) {
             LOGGER.error("Error occurred in hello world service : {}", exception.getMessage());
         }
-
         return response.body();
-
     }
-
-
 }

@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "5a9f4824-277f-4ed5-9206-23c28ffe6b2e",
+		"name": "Hello World Assigment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Assigment 2 - HelloRest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hello-rest",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello-rest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assigment 3 - HelloHTML",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hello-world",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello-world"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assigment DB 4/8/11 - H2,SQL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hello/English",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"English"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assigment 5 - Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"Milica\",\r\n\"password\":\"milica1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/secure/hello",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"secure",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assigment 5 - Login Error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"Marija\",\r\n\"password\":\"milica1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/secure/hello",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"secure",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assigment 6 - AddNewLang",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"lang\":\"Bosnian\",\r\n \"hw_translation\":\"Zdravo svijete\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/new-language",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new-language"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assigment 9 - ExternalAPI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hello/fr",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello",
+						"fr"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

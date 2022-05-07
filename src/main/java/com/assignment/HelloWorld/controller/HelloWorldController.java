@@ -29,8 +29,7 @@ public class HelloWorldController {
     }
 
     @PostMapping("/new-language")
-    private int saveLanguage(@RequestBody HelloWorldModel language)
-    {
+    public int saveLanguage(@RequestBody HelloWorldModel language) {
         helloWorldService.saveOrUpdate(language);
         return language.getId();
     }
