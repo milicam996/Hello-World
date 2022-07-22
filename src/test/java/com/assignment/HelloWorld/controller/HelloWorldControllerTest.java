@@ -1,6 +1,5 @@
 package com.assignment.HelloWorld.controller;
 
-import com.assignment.HelloWorld.service.HelloWorldService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.*;
@@ -15,7 +14,7 @@ class HelloWorldControllerTest {
     @Autowired
     MockMvc mockMvc;
 
-    private static final Logger LOGGER = LogManager.getLogger(HelloWorldService.class);
+    private static final Logger LOGGER = LogManager.getLogger(HelloWorldController.class);
 
     @BeforeAll
     static void beforeClass() {
